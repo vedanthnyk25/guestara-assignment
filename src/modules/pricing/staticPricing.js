@@ -6,7 +6,7 @@ export default function resolveStaticPricing(config) {
 
   return {
     available: true,
-    basePrice: config.price,
-    pricingType: 'STATIC'
+    base_price: config.price,
+    pricing_type: 'STATIC'
   }
 }
