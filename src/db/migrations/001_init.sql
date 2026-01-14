@@ -26,7 +26,7 @@ CREATE TABLE items (
   image TEXT,
 
   pricing_type TEXT NOT NULL
-    CHECK (pricing_type IN ('STATIC', 'DISCOUNT')),
+    CHECK (pricing_type IN ('STATIC', 'DISCOUNT', 'DYNAMIC')),
 
   pricing_config JSONB NOT NULL,  
 
