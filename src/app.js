@@ -2,6 +2,7 @@ import express from "express";
 import {pool} from "./config/db.js"
 import asyncHandler from "./utils/asyncHandler.js";
 import itemRoutes from "./modules/item/item.routes.js";
+import bookingRoutes from "./modules/booking/booking.routes.js";
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.get("/health", asyncHandler(async (req, res) => {
 }));
 
 app.use("/items", itemRoutes);
+
+app.use("/bookings", bookingRoutes);
 
 
 

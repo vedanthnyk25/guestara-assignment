@@ -8,7 +8,7 @@ VALUES
   ),
   (
     '22222222-2222-2222-2222-222222222222',
-    'Services',
+    'Wellness Services',
     false,
     NULL
   );
@@ -82,14 +82,25 @@ VALUES (
   '{"price": 500}'
 );
 
-INSERT INTO item_tax_override (
+INSERT INTO item_availability (
   item_id,
-  tax_applicable,
-  tax_percentage
+  day_of_week,
+  start_time,
+  end_time
+)
+VALUES
+  ('dddddddd-dddd-dddd-dddd-dddddddddddd', 1, '10:00', '11:00'),
+  ('dddddddd-dddd-dddd-dddd-dddddddddddd', 1, '17:00', '18:00');
+
+INSERT INTO item_bookings (
+  item_id,
+  booking_date,
+  start_time,
+  end_time
 )
 VALUES (
   'dddddddd-dddd-dddd-dddd-dddddddddddd',
-  false,
-  NULL
+  '2026-01-19', -- Monday
+  '10:00',
+  '11:00'
 );
-
