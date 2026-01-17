@@ -29,7 +29,7 @@ export default function resolveDynamicPricing(config, atTime) {
 
   return {
     available: false,
-    basePrice: null,
-    pricingType: 'DYNAMIC'
+    base_price: null,
+    pricing_type: 'DYNAMIC'
   };
 }
